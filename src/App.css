@@ -1,0 +1,27 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border-left: 2px solid #007bff;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-left: 20px;
+}
+
+.timeline-item h5 {
+  color: #007bff;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #007bff;
+  border-radius: 50%;
+}
