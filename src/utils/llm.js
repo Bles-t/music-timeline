@@ -63,22 +63,31 @@ const axios = require('axios');
 
 const fetchEventDataFromChatGPT = async (artist) => {
     const prompt = `
-    Generate a list of up to 3 significant hip-hop events for the artist "${artist}". 
+    Generate a complete timeline of notable events for the hip-hop artist "${artist}" from the beginning of their career to the present.
+    For each year, include:
+    - Albums or mixtapes released
+    - Significant songs or diss tracks
+    - Awards won or major nominations
+    - Key collaborations or features
+    - Controversies or cultural impact moments
+
     The response must be in valid JSON format with the following structure:
     [
         {
             "title": "Event Title",
             "date": "YYYY-MM-DD",
             "description": "Detailed event description",
-            "artist": "Artist Name"
+            "artist": "${artist}"
         }
-    ]`;
+    ]
+    If multiple events occurred in the same year, list them as separate entries.
+    Focus on accuracy and cultural significance.`;
 
     try {
         const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo", // Ensure this matches your API's available models
             messages: [{ role: "user", content: prompt }],
-            max_tokens: 1200, // Adjust based on your needs
+            max_tokens: 3000, // Adjust based on your needs
         });
 
         // Parse the JSON response from ChatGPT
