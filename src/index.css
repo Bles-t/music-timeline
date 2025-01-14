@@ -4,6 +4,10 @@
 
 /* Optional: Add any custom CSS if needed */
 
+.timeline-title {
+  font-family: 'Poppins', sans-serif;
+}
+
 .timeline-item {
   position: relative;
 }

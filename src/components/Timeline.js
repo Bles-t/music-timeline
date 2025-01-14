@@ -3,7 +3,10 @@ import React from 'react';
 const Timeline = ({ events }) => {
     return (
         <div className="bg-black min-h-screen py-10 px-5">
-            <h1 className="text-center text-4xl font-bold text-white mb-12">Interactive Hip-Hop Timeline</h1>
+            <h1 className="text-center text-4xl font-bold text-white mb-12">
+                {events.length > 0 ? `${events[0].artist}'s Hip-Hop Timeline` : 'Interactive Hip-Hop Timeline'}
+            </h1>
+
 
             <div className="relative w-full flex justify-center">
                 {/* Horizontal Line */}
