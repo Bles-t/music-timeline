@@ -3,10 +3,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gold: '#FFD700',
+        gold: '#FFD700', // Gold
+        black: '#000000', // Black
+        white: '#ffffff', // White
       },
       animation: {
-        fadeIn: 'fadeIn 0.7s ease-in-out',
+        fadeIn: 'fadeIn 1s ease-in-out',
       },
       keyframes: {
         fadeIn: {

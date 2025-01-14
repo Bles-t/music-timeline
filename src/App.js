@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import SearchBar from './components/Searchbar';
 import Timeline from './components/Timeline';
+import './index.css'
 
 const App = () => {
   const [events, setEvents] = useState([]);

@@ -2,13 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Optional: Add any custom CSS if needed */
+
+.timeline-item {
+  position: relative;
 }
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #FFD700;
+}
+
+.bg-gold {
+  background-color: #FFD700;
+}
+
+.text-gold {
+  color: #FFD700;
+}
+
+.shadow-lg {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-xl {
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+
