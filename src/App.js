@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import SearchBar from './components/SearchBar';
+import SearchBar from './components/Searchbar';
 import Timeline from './components/Timeline';
 
 const App = () => {
