@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import SearchBar from './components/Searchbar'
+import SearchBar from './components/SearchBar';
 import Timeline from './components/Timeline';
 
 const App = () => {
@@ -18,8 +18,8 @@ const App = () => {
   };
 
   return (
-    <div className="container mt-4">
-      <h1 className="text-center mb-4">Interactive Hip-Hop Timeline</h1>
+    <div className="bg-black text-gold min-h-screen p-4">
+      <h1 className="text-center text-4xl font-bold mb-8">Interactive Hip-Hop Timeline</h1>
       <SearchBar onSearch={fetchEvents} />
       <Timeline events={events} />
     </div>
