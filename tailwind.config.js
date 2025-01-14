@@ -1,11 +1,9 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        gold: '#FFD700', // Gold color
-        black: '#000000', // Black color
+        gold: '#FFD700',
       },
       animation: {
         fadeIn: 'fadeIn 0.7s ease-in-out',
