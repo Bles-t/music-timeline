@@ -3,18 +3,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gold: '#FFD700', // Gold
-        black: '#000000', // Black
-        white: '#ffffff', // White
+        gold: '#FFD700', // Gold color
+        black: '#000000', // Black color
+        white: '#ffffff', // White color
       },
-      animation: {
-        fadeIn: 'fadeIn 1s ease-in-out',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: 0, transform: 'translateY(20px)' },
-          '100%': { opacity: 1, transform: 'translateY(0)' },
-        },
+      spacing: {
+        64: '16rem', // Width for large event cards
       },
     },
   },
