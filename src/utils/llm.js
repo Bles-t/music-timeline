@@ -87,7 +87,7 @@ const fetchEventDataFromChatGPT = async (artist) => {
         const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo", // Ensure this matches your API's available models
             messages: [{ role: "user", content: prompt }],
-            max_tokens: 300, // Adjust based on your needs
+            max_tokens: 4000, // Adjust based on your needs
         });
 
         // Parse the JSON response from ChatGPT
