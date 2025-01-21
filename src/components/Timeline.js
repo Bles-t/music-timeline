@@ -7,7 +7,6 @@ const Timeline = ({ events }) => {
                 {events.length > 0 ? `${events[0].artist}'s Hip-Hop Timeline` : 'Interactive Hip-Hop Timeline'}
             </h1>
 
-
             <div className="relative w-full flex justify-center">
                 {/* Horizontal Line */}
                 <div className="absolute top-1/2 left-5 right-5 h-1 bg-gold"></div>
