@@ -7,9 +7,20 @@ import './index.css'
 const App = () => {
   const [events, setEvents] = useState([]);
 
+  // const fetchEvents = async (artist) => {
+  //   try {
+  //     const response = await axios.get(`http://localhost:5001/events?artist=${artist}`);
+  //     console.log('Response from server:', response.data);
+  //     setEvents(response.data);
+  //   } catch (error) {
+  //     console.error('Error fetching events:', error);
+  //     setEvents([]);
+  //   }
+  // };
+
   const fetchEvents = async (artist) => {
     try {
-      const response = await axios.get(`http://localhost:5001/events?artist=${artist}`);
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/events?artist=${artist}`);
       console.log('Response from server:', response.data);
       setEvents(response.data);
     } catch (error) {
@@ -17,6 +28,7 @@ const App = () => {
       setEvents([]);
     }
   };
+
 
   return (
     <div className="bg-black text-gold min-h-screen flex flex-col">
