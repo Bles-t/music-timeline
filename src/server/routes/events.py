@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException, Query
 import logging
 from src.server.utils.llm import fetch_event_data_from_chatgpt
 
+
 router = APIRouter()
 
 @router.get("/")
