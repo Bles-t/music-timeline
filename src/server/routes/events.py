@@ -16,7 +16,7 @@ async def get_events(artist: str = Query(..., description="Name of the hip-hop a
     
     try:
         # Fetch data directly from ChatGPT via our utility function.
-        events = await fetch_event_data_from_chatgpt(artist)
+        events =  fetch_event_data_from_chatgpt(artist)
         return events
     except Exception as e:
         logging.error(f"Error fetching events: {e}")
