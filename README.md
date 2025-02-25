@@ -40,10 +40,9 @@ An **AI-powered timeline** that showcases major events in **hip-hop history**. U
 - Search results with a populated timeline  
 - API response examples (optional)  
 
-You can add images like this:
-```md
+
+
 ![Screenshot of Hip-Hop Timeline](./image1.png)
-```
 
 ---
 
