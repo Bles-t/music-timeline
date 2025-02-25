@@ -3,6 +3,8 @@ import axios from 'axios';
 import SearchBar from './components/Searchbar';
 import Timeline from './components/Timeline';
 import './index.css'
+import { useNavigate } from 'react-router-dom';
+import { Button } from 'bootstrap';
 
 const App = () => {
   const [events, setEvents] = useState([]);
@@ -29,10 +31,14 @@ const App = () => {
     }
   };
 
+  const handleClick = () => {
+
+  }
 
   return (
     <div className="bg-black text-gold min-h-screen flex flex-col">
       <h1 className="text-center text-4xl font-bold py-6">Interactive Hip-Hop Timeline</h1>
+      <button className="bg-yellow-500 px-4 py-1 rounded">About</button>
       <SearchBar onSearch={fetchEvents} />
       <Timeline events={events} />
     </div>
