@@ -1,11 +1,16 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
 
-# Get the directory of the current file (server.py)
-current_dir = os.path.dirname(os.path.abspath(__file__))
-load_dotenv(os.path.join(current_dir, ".env"))
+# Explicitly load the .env file from the correct directory
+env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+load_dotenv(env_path)
+
+# Ensure the PORT variable is properly read
+PORT = int(os.getenv("PORT", 5001))
+
+print(f"Server is running on PORT: {PORT}")  # Debugging
 
 # Create FastAPI app
 app = FastAPI()
@@ -32,4 +37,4 @@ app.include_router(events.router, prefix="/events")
 # Start the server when this file is run directly
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=PORT)
+    uvicorn.run("src.server.server:app", host="0.0.0.0", port=PORT, reload=True)
