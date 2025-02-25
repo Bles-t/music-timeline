@@ -19,7 +19,9 @@ For each year, include:
 - Key collaborations or features
 - Controversies or cultural impact moments
 
-The response must be in valid JSON format with the following structure:
+Return the response in valid JSON format (keys and string values must use double quotes, and do not include any extra commentary or text).
+
+The JSON should have the following structure:
 [
     {{
         "title": "Event Title",
@@ -28,9 +30,11 @@ The response must be in valid JSON format with the following structure:
         "artist": "{artist}"
     }}
 ]
+
 If multiple events occurred in the same year, list them as separate entries.
 Focus on accuracy and cultural significance.
 """
+
 
     try:
         response = openai.ChatCompletion.create(

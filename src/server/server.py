@@ -1,10 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
 import os
-from dotenv import load_dotenv  
 
-# Load environment variables from the .env file
-load_dotenv()
+# Get the directory of the current file (server.py)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+load_dotenv(os.path.join(current_dir, ".env"))
 
 # Create FastAPI app
 app = FastAPI()
@@ -23,6 +24,7 @@ app.add_middleware(
 
 
 from src.server.routes import events  
+print(f"Starting server on port: {PORT}")
 
 # Include the events router with the prefix /events
 app.include_router(events.router, prefix="/events")
