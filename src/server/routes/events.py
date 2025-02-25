@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Query
 import logging
-from ..utils.llm import fetch_event_data_from_chatgpt
+from src.server.utils.llm import fetch_event_data_from_chatgpt
 
 router = APIRouter()
 

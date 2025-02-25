@@ -21,10 +21,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Import your events router (adjust the path as needed)
-# If your events route file is now located at src/server/routes/events.py,
-# then you can import it like this:
-from routes import events  # assuming your file structure is: src/server/routes/events.py
+
+from src.server.routes import events  
 
 # Include the events router with the prefix /events
 app.include_router(events.router, prefix="/events")
