@@ -22,6 +22,7 @@ const App = () => {
   //     setEvents([]);
   //   }
   // };
+  console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
 
   const fetchEvents = async (artist) => {
     try {
